@@ -25,6 +25,8 @@ public class MySQLConectionEngine {
         return status;
     }
 
+//    Método public do tipo ResultSet, significa que retornará também um tipo ResultSet
+//    Método resposável por executar as Querys do banco de dados.
     public ResultSet criarQuery(String query){
         Connection connection = getMySQLConectionEngine();
 
@@ -39,6 +41,9 @@ public class MySQLConectionEngine {
         return null;
     }
 
+
+//    Método privado do tipo Connection, significa que retornará também um tipo Connection
+//    Criação da conexão com o banco de dados
     private Connection getMySQLConectionEngine() {
         this.connection = null;
 
@@ -72,6 +77,9 @@ public class MySQLConectionEngine {
 
         }
     }
+
+//    Método void, sem retorno.
+//    Este método irá fechar a conexão
     public void fecharConexao() {
         try {
             if(connection!=null) {
